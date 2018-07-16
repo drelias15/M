@@ -23,7 +23,7 @@ public class Mortgage {
         System.out.printf("Enter the term (years) for the loan payment: ");
         yearsOfPayment = keyboard.nextInt();
 
-        System.out.printf("\n======================================");
+        System.out.printf("\n======================================\n");
         keyboard.close();
 
         //Declaring and initializing variables that will record the output of the method getMonthlyPayment
@@ -41,7 +41,7 @@ public class Mortgage {
         double base = (rate + 1);
         double months = yearOfPayment * 12;
         double result = 0.0;
-        result = 1* (rate * (Math.pow(base, months)) / Math.pow(base, months));
+        result = ((rate *loan)/ (1-Math.pow(base, -months)));
 
         return result;
     }
